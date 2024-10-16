@@ -27,7 +27,7 @@ function TranslateInit() {
     let code = TranslateGetCode();
     // Находим флаг с выбранным языком для перевода и добавляем к нему активный класс
     if (document.querySelector('[data-google-lang="' + code + '"]') !== null) {
-        document.querySelector('[data-google-lang="' + code + '"]').classList.add('language__img_active');
+        document.querySelector('[data-google-lang="' + code + '"]').classList.add('language__item_active');
     }
 
     if (code == googleTranslateConfig.lang) {
@@ -41,7 +41,7 @@ function TranslateInit() {
         pageLanguage: googleTranslateConfig.lang,
     });
 
-    // Вешаем событие  клик на флаги
+    // Вешаем событие  клик на название языка
     TranslateEventHandler('click', '[data-google-lang]', function (e) {
         TranslateCookieHandler("/" + googleTranslateConfig.lang + "/" + e.getAttribute("data-google-lang"), googleTranslateConfig.domain);
         // Перезагружаем страницу
