@@ -14,7 +14,7 @@ const googleTranslateConfig = {
     /* Если скрипт не работает на поддомене, 
     раскомментируйте и
     укажите основной домен в свойстве domain */
-    /*domain: "matller.com"*/
+    domain: "webcreww.ru"
 };
 
 function TranslateInit() {
